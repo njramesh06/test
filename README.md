@@ -26,7 +26,7 @@
     * Either Git Project/Downloaded Source code can be GitClone/open through Terminal or IDE,
     * Run the following commands, 
       >
-          1. npm install
+          1. npm install --save-dev cypress-cucumber-preprocessor
       
           2. npm update
       
