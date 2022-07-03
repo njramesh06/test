@@ -13,7 +13,7 @@
     "mytest_feature_tags":"npm run clean_dir && CYPRESS_testFiles=**/features/*.feature ./node_modules/.bin/cypress-tags run -e TAGS='@myTestScript' || npm run generate_reports"
 
   },
-  "author": "Viknesvarane Mourougaiyane",
+  "author": "Ramesh",
   "license": "ISC",
   "devDependencies": {
     "@types/cypress-cucumber-preprocessor": "^4.0.1",
