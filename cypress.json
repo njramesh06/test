@@ -1,0 +1,17 @@
+{
+    "testFiles": "",
+    "env": {
+        "profile": "",
+        "legacyUrl": "",
+        "reefersUrl": "",
+        "shopUrl":"",
+        "username": "rameshgounder",
+        "password": ""
+    },
+    "defaultCommandTimeout": 120000,
+    "viewportHeight": 720,
+    "screenshotsFolder": "cypress/test-artifacts/screenshots/",
+    "videosFolder": "cypress/test-artifacts/videos/",
+    "viewportWidth": 1280,
+    "chromeWebSecurity": false
+}

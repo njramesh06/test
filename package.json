@@ -1,0 +1,36 @@
+{
+  "name": "odyssey-automation",
+  "version": "1.0.0",
+  "description": "Cypress - Automation ",
+  "main": "index.js",
+  "scripts": {
+    "clean_dir": "rm -r cypress/test-artifacts || mkdir cypress/test-artifacts",
+    "generate_reports": "node cucumber-html-report.js",
+    "open_mytest_feature": "npm run clean_dir && CYPRESS_testFiles=**/features/*.feature ./node_modules/.bin/cypress open",
+    "run_mytest_feature": "npm run clean_dir && CYPRESS_testFiles=**/features/legacy/*.feature ./node_modules/.bin/cypress run",
+    "runwithReport_mytest_feature": "npm run clean_dir && CYPRESS_testFiles=**/features/*.feature ./node_modules/.bin/cypress run || npm run generate_reports",
+    "mytest_feature_tags": "npm run clean_dir && CYPRESS_testFiles=**/features/*.feature ./node_modules/.bin/cypress-tags run -e TAGS='@myTestScript' || npm run generate_reports"
+  },
+  "author": "Ramesh",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cypress-cucumber-preprocessor": "^4.0.1",
+    "ansi-regex": "^6.0.1",
+    "chai": "^4.3.4",
+    "cypress": "^9.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-get-table": "^1.0.1",
+    "cypress-xpath": "^1.6.2",
+    "mocha": "^9.1.4",
+    "multiple-cucumber-html-reporter": "^1.18.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "commonPath": "**/step-definitions/*",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/test-artifacts/cucumber-json/",
+      "filePrefix": "Auto_RG_"
+    }
+  }
+}
